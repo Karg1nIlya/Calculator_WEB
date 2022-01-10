@@ -2,8 +2,6 @@ let formula = ''
 
 function updateInput(){
     size = formula.length-1
-    console.log(formula)
-    console.log(formula[size])
     if(formula == ''){
         document.getElementById('input_num').value = '0'
     }
@@ -14,24 +12,43 @@ function updateInput(){
 
 function addOperation(opearation){
     size = formula.length-1
-    if(formula[size] != '.' && formula[size] != '*' && formula[size] != '+' && formula[size] != '-' && formula[size] != '/'){
-        formula += opearation
+    if(formula!='' && formula[size] != '.' && formula[size] != '*' && formula[size] != '+' && formula[size] != '-' && formula[size] != '/'){
+        let flag = true;
+        if(opearation=='.'){
+            for(let i = size; i>=0; i--){
+                if(formula[i]=='+' || formula[i]=='-' || formula[i]=='*' || formula[i]=='/'){
+                    break
+                }
+                if(formula[i]=='.'){
+                    flag = false
+                    break
+                }
+            }
+        }
+        if(flag){//проверка на то, что ',' уже стоит ранее в числе
+            formula += opearation
+        }
     }
     else {
-        let newformula = ""
-        for(let i = 0; i<size; i++){
-            newformula += formula[i]
+        console.log('s')
+        if(formula!=''){
+            let newformula = ''
+            for(let i = 0; i<size; i++){
+                newformula += formula[i]
+            }
+            formula = newformula + opearation
         }
-        formula = newformula + opearation
     }
     updateInput()
 }
 
 function calcResult(){
     try {
-        let res = String(eval(formula))
-        document.getElementById('input_num').value = res
-        formula = res
+        if(formula!=''){
+            let res = String(eval(formula))
+            document.getElementById('input_num').value = res
+            formula = res
+        }
     } 
     catch (e) {
         formula = ''
@@ -59,8 +76,9 @@ function addNumber(num){
 }
 
 function sign(){
-    if(formula!='')
+    if(formula!=''){
         formula = String(eval(formula)*(-1))
+    }
     updateInput()
 }
 
