@@ -1,0 +1,113 @@
+.calculator{
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    border: 5px;
+    background-color: rgb(34, 33, 33);
+    width: 404px;
+    height: 646px;
+    justify-content: center;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+
+.red_circle, .yellow_circle, .green_circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.circles{
+    display: flex;
+    flex-direction: row;
+    height: 45px;   
+}
+
+.red_circle{
+    background-color: red;
+}
+
+.yellow_circle{
+    background-color: yellow;
+}
+
+.green_circle{
+    background-color: green;
+}
+
+.input_block{
+    width: auto;
+    height: auto;
+    background-color: rgb(34, 33, 33);
+}
+
+.input_num{
+    width: 360px;
+    height: 100px;
+    padding: 0px;
+    border: 0px;
+    background-color: rgb(34, 33, 33);
+    font-size: 65px;
+    color: honeydew;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    /* unicode-bidi:bidi-override;  */
+    /* direction: RTL; input text right side */
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align:right;
+}
+
+.keys{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.2px;
+}
+
+.key{
+    flex-basis: 25%;
+    /* text-align: center; */
+    background-color: rgb(151, 151, 151);
+    /* margin: 1px; */
+    border-color: rgb(34, 33, 33);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: honeydew;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    /* font-weight: bold; */
+}
+
+.key:hover{
+    border: 2px #40565f;
+	color: #497b94;
+    border-radius: 5px;
+	/* background: rgba(0,0,0,0); */
+}
+
+.key:active{
+    width: 98px;
+    height: 98px;
+}
+
+#key_0{
+    flex-basis: 50%;
+    border-bottom-left-radius:15px;
+}
+
+#key_eq{
+    border-bottom-right-radius:15px;
+}
+
+#key_ac, #key_sign, #key_percent{
+    background-color: rgb(100, 100, 100);
+}
+
+#key_division, #key_x, #key_minus, #key_plus, #key_eq{
+    background-color: orange;
+}
+
