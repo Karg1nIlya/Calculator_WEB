@@ -10,30 +10,33 @@
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
 }
 
-.red_circle, .yellow_circle, .green_circle{
+.circle {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
-.circles{
-    display: flex;
-    flex-direction: row;
-    height: 45px;   
-}
-
-.red_circle{
+.circle_bgcolor_red {
     background-color: red;
 }
 
-.yellow_circle{
+.circle_bgcolor_yellow {
     background-color: yellow;
 }
 
-.green_circle{
+.circle_bgcolor_green {
     background-color: green;
+}
+
+.circles {
+    display: flex;  
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.circles__item {
+    margin-left: 10px;
 }
 
 .input_block{
