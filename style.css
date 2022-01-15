@@ -10,12 +10,6 @@
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
 }
 
-.square {
-    background: #60a;
-    width: 25px;
-    height: 25px;
-}
-
 .circle {
     width: 25px;
     height: 25px;
