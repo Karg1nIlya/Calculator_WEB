@@ -3,10 +3,10 @@ let formula = ''
 function updateInput(){
     size = formula.length-1
     if(formula == ''){
-        document.getElementById('input_num').value = '0'
+        document.getElementById('input').value = '0'
     }
     else{
-        document.getElementById('input_num').value = formula
+        document.getElementById('input').value = formula
     }
 }
 
@@ -46,13 +46,13 @@ function calcResult(){
     try {
         if(formula!=''){
             let res = String(eval(formula))
-            document.getElementById('input_num').value = res
+            document.getElementById('input').value = res
             formula = res
         }
     } 
     catch (e) {
         formula = ''
-        document.getElementById('input_num').value = 'ОШИБКА'
+        document.getElementById('input').value = 'ОШИБКА'
     }
 }
 

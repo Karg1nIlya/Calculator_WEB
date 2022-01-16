@@ -15,32 +15,32 @@
             <li class="circles__item circle circle_bgcolor_green"></li>
         </ul>
         <div class="input_block">
-            <input type="text" class="input_num" id="input_num" disabled="disabled" value="0">
+            <input type="text" class="input input_num" id="input" disabled="disabled" value="0">
         </div>
         <div class="keys">
-            <button class="key" id="key_ac" onclick="clearInput()">AC</button>
-            <button class="key" id="key_sign" onclick="sign()">+/-</button>
-            <button class="key" id="key_percent" onclick="percent()">%</button>
-            <button class="key" id="key_division" onclick="addOperation('/')">÷</button>
+            <button class="keys__but key key_bgcolor_black" id="key_ac" onclick="clearInput()">AC</button>
+            <button class="keys__but key key_bgcolor_black" id="key_sign" onclick="sign()">+/-</button>
+            <button class="keys__but key key_bgcolor_black" id="key_percent" onclick="percent()">%</button>
+            <button class="keys__but key key_bgcolor_orange" id="key_division" onclick="addOperation('/')">÷</button>
+ 
+            <button class="keys__but key key_bgcolor_grey" id="key_7" onclick="addNumber('7')">7</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_8" onclick="addNumber('8')">8</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_9" onclick="addNumber('9')">9</button>
+            <button class="keys__but key key_bgcolor_orange" id="key_x" onclick="addOperation('*')">x</button>
 
-            <button class="key" id="key_7" onclick="addNumber('7')">7</button>
-            <button class="key" id="key_8" onclick="addNumber('8')">8</button>
-            <button class="key" id="key_9" onclick="addNumber('9')">9</button>
-            <button class="key" id="key_x" onclick="addOperation('*')">x</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_4" onclick="addNumber('4')">4</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_5" onclick="addNumber('5')">5</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_6" onclick="addNumber('6')">6</button>
+            <button class="keys__but key key_bgcolor_orange" id="key_minus" onclick="addOperation('-')">-</button>
 
-            <button class="key" id="key_4" onclick="addNumber('4')">4</button>
-            <button class="key" id="key_5" onclick="addNumber('5')">5</button>
-            <button class="key" id="key_6" onclick="addNumber('6')">6</button>
-            <button class="key" id="key_minus" onclick="addOperation('-')">-</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_1" onclick="addNumber('1')">1</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_2" onclick="addNumber('2')">2</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_3" onclick="addNumber('3')">3</button>
+            <button class="keys__but key key_bgcolor_orange" id="key_plus" onclick="addOperation('+')">+</button>
 
-            <button class="key" id="key_1" onclick="addNumber('1')">1</button>
-            <button class="key" id="key_2" onclick="addNumber('2')">2</button>
-            <button class="key" id="key_3" onclick="addNumber('3')">3</button>
-            <button class="key" id="key_plus" onclick="addOperation('+')">+</button>
-
-            <button class="key" id="key_0" onclick="addNumber('0')">0</button>
-            <button class="key" id="key_," onclick="addOperation('.')">,</button>
-            <button class="key" id="key_eq" onclick="calcResult()">=</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_0" onclick="addNumber('0')">0</button>
+            <button class="keys__but key key_bgcolor_grey" id="key_," onclick="addOperation('.')">,</button>
+            <button class="keys__but key key_bgcolor_orange" id="key_eq" onclick="calcResult()">=</button>
         </div>
     </div>
     <script src="main.js"></script>
